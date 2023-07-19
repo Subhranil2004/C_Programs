@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int main()
+{
+    int width;
+    int number;
+    scanf("%*d %*s %d %*f %d %*c", &width, &number);
+    printf("width = %d, number = %d", width, number);
+}
+Output:
+12 String 13 14.55 1000 c
+width = 13, number = 1000
+
+Format specifier : 
+>> %*[width][modifier]type...modifier--> h,l,L
+>> For strings : %[alignment(- for left, + for right)][min width of output].[maximum number of characters to be printed]
+printf("%+10.4s","football"); wil print "      foot".
+*(i+arr) is OK.
+
+Pointers comparison :
+#include <stdio.h>
+int main()
+{
+    int *p2;
+    int *p1;
+    int a = 1;
+    int b = 2;
+    p1 = &a;
+    p2 = &b;
+    if (p1 > p2)
+        printf("P1 is greater than p2\np1 = %p, p2 = %p", p1, p2);
+    else
+        printf("P2 is greater than p1.");
+    return (0);
+}
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char str1[] = "footb", str2[] = "foot", str3[] = "abcd";
+  int result;
+  result = strcmp(str1, str2);
+  printf("strcmp(str1, str2) = %d\n", result);
+  return 0;
+}
+ASCII of '\0' is 0.So strcmp()=1...As it compares b(98) with '\0'(0). 
