@@ -9,7 +9,7 @@ Node *head;
 void createLinkedList(); // !Always return head!
 void deleteNode(int);
 void displayLinkedList();
-//Node *searchNode(int);
+
 int main()  
 {
     int ch, data;
@@ -81,7 +81,7 @@ void createLinkedList()
         }
     }
     printf("Linked List with %d nodes created successfully.\n", n);
-    //return head; // Return the head of the linked list
+    
 }
 
 
